@@ -9,14 +9,18 @@
 
 ## 🌱 Overview
 
-**ESG-Oracle** is a deep learning mini-project focused on forecasting **ESG (Environmental, Social, and Governance)** scores across countries for 2025–2026. It blends classical deep learning with synthetic data generation to explore real-world sustainability trends.
+**ESG-Oracle** is a deep learning mini-project designed to forecast **Environmental, Social, and Governance (ESG)** scores for countries around the world — specifically for the years **2025 and 2026**. ESG scores play a vital role in evaluating a country’s or organization’s sustainability practices, governance structures, and social impact — all crucial for building a more responsible and climate-conscious future.
 
-This repo features:
-- 📈 ESG forecasting using **RNN** and **LSTM**
-- 🧬 Synthetic data generation via **CVAE**
-- 📊 Clean and detailed visualizations
-- 🧠 Scalable, modular codebase
+This project combines classical time-series modeling with synthetic data generation to tackle the challenge of sparse or noisy ESG data. By leveraging both **Recurrent Neural Networks (RNNs)** and **Long Short-Term Memory (LSTM)** models, the system forecasts country-level ESG trends. In addition, it uses a **Conditional Variational Autoencoder (CVAE)** to generate synthetic time-series data, enriching the forecasting pipeline and testing model robustness.
 
+Whether you're exploring AI for sustainability, trying to decode ESG metrics, or simply into neural nets that care about the planet, this project shows how deep learning can support better decision-making for a greener tomorrow.
+
+### 📦 This repository includes:
+- 📈 ESG forecasting using **RNN** and **LSTM** architectures  
+- 🧬 Synthetic ESG time-series generation with **CVAE**  
+- 📊 Clean visualizations comparing real, predicted, and synthetic trends  
+- 🧠 Modular, extensible code for future experimentation and deployments
+- 
 ---
 
 ## 🧠 Features
@@ -34,27 +38,18 @@ This repo features:
 - Python 3.11  
 - PyTorch, NumPy, Pandas  
 - Scikit-learn, Matplotlib  
-- TorchQuantum, Qiskit, PennyLane (Quantum ready)
 
 ---
 
-## 📁 Project Structure
+## 📊 Model Metrics
 
-```
-esg-oracle/
-├── results/
-│   ├── metrics/
-│   │   ├── lstm_metrics.csv
-│   │   └── rnn_metrics.csv
-│   └── predictions/
-│       ├── esg_forecasts_2025_2026.csv
-│       └── esg_forecasts_lstm_2025_2026.csv
-├── visualizations/
-│   ├── forecast_plotter.py
-│   ├── tsne_plotter.py
-│   ├── trend_metrics_plot.py
-│   └── model_comparison_plot.py
-```
+| Metric | RNN | LSTM |
+|--------|-----|------|
+| **MSE** | 0.01341 | 0.01348 |
+| **MAE** | 0.06125 | 0.06133 |
+| **R²**  | 0.94453 | 0.95118 |
+
+*These metrics reflect the 2025–2026 forecast window using real ESG score data.*
 
 ---
 
@@ -89,4 +84,5 @@ MSc Data Science @ IIIT Lucknow
 
 ---
 
-> “Because saving the planet looks better with a good R² score.” 🌍📈
+> “Because saving the planet looks better with a good R² score.” 🌍📈 
+
